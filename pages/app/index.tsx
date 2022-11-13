@@ -59,9 +59,8 @@ const PitchPage = () => {
           <div className="w-full h-2/3 bg-white rounded-md border border-slate-300 flex flex-col p-10">
             <div className="h-2/5 w-full text-black flex flex-row items-stretch">
               <div className="flex flex-col justify-center items-start h-20">
-                <picture>
-                  <img src={`/demo/${slide.logo}`} className="max-h-20" />
-                </picture>
+                  <Image src={`/demo/${slide.logo}`} width={50} height={50} alt={""} />
+
               </div>
               <div className="flex flex-col justify-center items-start h-20 ml-4">
                 <span className="font-bold text-3xl">{slide.title}</span>
@@ -73,14 +72,16 @@ const PitchPage = () => {
             </div>
           </div>
           <div className="w-full h-1/3 flex flex-row my-6">
-            <div className="w-1/3 h-full bg-white rounded-md border border-slate-300 mr-2 p-4 px-6 pt-3  cursor-pointer transition-all duration-300 ease-in-out hover:scale-105">
-              <div className="flex border border-slate-200 rounded-lg overflow-hidden">
-                <picture>
-                  <img
+            <div className="w-1/3 h-full bg-white rounded-md border border-slate-300 mr-2 p-4 px-6 pt-3  cursor-pointer transition-all duration-300 ease-in-out scale-100 hover:scale-105">
+              <div className="border border-slate-200 rounded-lg overflow-hidden max-w-full">
+
+                  <Image
                     src={`/demo/${slide.pitch}`}
-                    className="rounded-lg w-full"
-                  ></img>
-                </picture>
+                    className="rounded-lg max-w-full max-h-full"
+                    layout="fill"
+                    alt={""}
+                  ></Image>
+
               </div>
             </div>
             <div className="w-1/3 h-full bg-white rounded-md border border-slate-300 mx-2 p-4  cursor-pointer transition-all duration-300 ease-in-out hover:scale-105">
