@@ -20,7 +20,7 @@ const Signup: NextPage = () => {
     if (user) {
       Router.push("/search");
     }
-  }, []);
+  }, [user]);
 
   const changePage = async (page: number) => {
     await new Promise((r) => setTimeout(r, ANIMATION_DURATION));

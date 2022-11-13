@@ -20,7 +20,7 @@ const Login: NextPage = () => {
     if (user) {
       Router.push("/");
     }
-  }, []);
+  }, [user]);
 
   const changePage = async (page: number) => {
     await new Promise((r) => setTimeout(r, ANIMATION_DURATION));
