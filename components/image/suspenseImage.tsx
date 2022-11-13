@@ -1,4 +1,5 @@
 import { useImage } from "react-image";
+import Image from "next/image";
 
 interface SuspenseImage {
   imageSrc: string;
@@ -15,5 +16,5 @@ export default function SuspenseImage({
     srcList: imageSrc,
   });
 
-  return <img src={src} alt={alt} className={className} />;
+  return <Image src={src} alt={alt ? alt : ""} className={className} fill={true} />;
 }

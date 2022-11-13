@@ -130,8 +130,8 @@ const OnboardingTextInput = ({
           }}
         >
           <option value=""></option>
-          {selectOptions && selectOptions.map(({value, text})=>(
-            <option value={value}>{text}</option>
+          {selectOptions && selectOptions.map(({value, text}, index)=>(
+            <option value={value} key={index}>{text}</option>
           ))}
         </select>
       )}
