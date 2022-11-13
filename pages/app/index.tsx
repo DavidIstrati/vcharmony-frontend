@@ -59,29 +59,28 @@ const PitchPage = () => {
           <div className="w-full h-2/3 bg-white rounded-md border border-slate-300 flex flex-col p-10">
             <div className="h-2/5 w-full text-black flex flex-row items-stretch">
               <div className="flex flex-col justify-center items-start h-20">
-                <img src={`/demo/${slide.logo}`} className="max-h-20" />
+                <picture>
+                  <img src={`/demo/${slide.logo}`} className="max-h-20" />
+                </picture>
               </div>
               <div className="flex flex-col justify-center items-start h-20 ml-4">
                 <span className="font-bold text-3xl">{slide.title}</span>
-                <span className="font-normal text-sm">
-                  {slide.categories}
-                </span>
+                <span className="font-normal text-sm">{slide.categories}</span>
               </div>
             </div>
             <div className="h-3/5 w-full">
-              <span className="font-bold text-black">
-              {slide.descritpion}
-
-              </span>
+              <span className="font-bold text-black">{slide.descritpion}</span>
             </div>
           </div>
           <div className="w-full h-1/3 flex flex-row my-6">
             <div className="w-1/3 h-full bg-white rounded-md border border-slate-300 mr-2 p-4 px-6 pt-3  cursor-pointer transition-all duration-300 ease-in-out hover:scale-105">
               <div className="flex border border-slate-200 rounded-lg overflow-hidden">
-                <img
-                  src={`/demo/${slide.pitch}`}
-                  className="rounded-lg w-full"
-                ></img>
+                <picture>
+                  <img
+                    src={`/demo/${slide.pitch}`}
+                    className="rounded-lg w-full"
+                  ></img>
+                </picture>
               </div>
             </div>
             <div className="w-1/3 h-full bg-white rounded-md border border-slate-300 mx-2 p-4  cursor-pointer transition-all duration-300 ease-in-out hover:scale-105">
@@ -97,17 +96,23 @@ const PitchPage = () => {
                 Business Model
               </div>
               <div className="flex-inline h-4/5 items-start text-xs font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-slate-500 to-white">
-                {slide.businessModel.slice(0,420)}
+                {slide.businessModel.slice(0, 420)}
               </div>
             </div>
           </div>
         </div>
         <div className="w-full h-40 flex flex-row">
-          <div className="w-1/2 h-20 mx-4 rounded-md bg-black flex justify-center items-center  cursor-pointer transition duration-300 ease-in-out hover:shadow-md hover:scale-105" onClick={()=>changeSlide()}>
+          <div
+            className="w-1/2 h-20 mx-4 rounded-md bg-black flex justify-center items-center  cursor-pointer transition duration-300 ease-in-out hover:shadow-md hover:scale-105"
+            onClick={() => changeSlide()}
+          >
             <RiCloseFill className="text-2xl mr-2 text-white" />
             <span className="text-white text-xl font-bold">Next</span>
           </div>
-          <div className="w-1/2 h-20 mx-4 rounded-md bg-gradient-to-r from-orange-400 to-red-400 flex justify-center items-center cursor-pointer transition duration-300 ease-in-out hover:shadow-md hover:scale-105" onClick={()=>changeSlide()}>
+          <div
+            className="w-1/2 h-20 mx-4 rounded-md bg-gradient-to-r from-orange-400 to-red-400 flex justify-center items-center cursor-pointer transition duration-300 ease-in-out hover:shadow-md hover:scale-105"
+            onClick={() => changeSlide()}
+          >
             <RiHeartFill className="text-2xl mr-2 text-white" />
             <span className="text-white text-xl font-bold">Like</span>
           </div>
