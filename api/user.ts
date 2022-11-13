@@ -18,7 +18,7 @@ interface User {
   password: string;
   firstName: string;
   lastName: string;
-  graduationYear?: string;
+  entityType?: string;
 }
 
 const postUser = async (body: User) => {
